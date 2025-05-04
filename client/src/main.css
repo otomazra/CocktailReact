@@ -1,0 +1,598 @@
+body {
+  background-color: #f5f5f5 !important;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900 */
+
+/* .montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 900
+
+.playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+#root {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  border-bottom: solid 1px rgb(223, 223, 223);
+}
+
+header a {
+  text-decoration: none;
+  /* box-shadow: none !important; */
+}
+
+.container{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigationList {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
+header li {
+  list-style-type: none;
+  box-shadow: none !important;
+}
+
+.homeLink {
+  text-decoration: none;
+}
+
+.banner {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 25px;
+  color: orange;
+}
+
+.db {
+  color: lime;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* .footer-div {
+  height: 80px;
+} */
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding-left: 150px; */
+  /* padding-right: 150px; */
+  border-top: solid rgb(218, 216, 216) 1px;
+  height: 80px;
+}
+
+footer a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  color: #008080;
+}
+footer a:hover {
+  color: orangered;
+  font-size: 25px;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+/* drink.ejs */
+
+.mainContainer {
+  margin: 0 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drinkMain {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.drinkName,
+.drinkCategory,
+.alcohol,
+.glass,
+.ingredients {
+  font-weight: bold;
+  font-family: sans-serif;
+  color: coral;
+  /* background-color: aquamarine; */
+  margin-right: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+li {
+  color: crimson;
+}
+
+.instructionTitle {
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: coral;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.instructionDiv {
+  /* background-color: #50c878; */
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 100px;
+}
+
+.instructionDiv > p {
+  width: 830px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.ingredients {
+  margin-bottom: 10px;
+}
+
+/* .ingredient {
+  color: #c7ea46;
+} */
+
+#ingredients {
+  margin-bottom: 5px;
+}
+
+.nameData,
+.categoryData,
+.alcoData,
+.glassData,
+.instructionText {
+  color: #333333;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+.ingredientMeasure {
+  margin: 5px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.pageTitle {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem;
+  color: #004d4d !important;
+  margin-bottom: 50px;
+  /* margin-right: 55px; */
+}
+
+/* #FF6F61
+#008080 */
+
+.homeButton {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto 30px auto;
+}
+
+#homePage {
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 15px;
+  /* -webkit-box-shadow: 1px 2px 14px #666666; */
+  /* -moz-box-shadow: 1px 2px 14px #666666; */
+  /* box-shadow: 1px 2px 14px #666666; */
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 18px;
+  background: #50c878;
+  padding: 12px 20px 12px 20px;
+  text-decoration: none;
+  border: none;
+  padding: 15px 20px 15px 20px;
+}
+
+#homePage:hover {
+  background: #2e8b57;
+  text-decoration: none;
+}
+
+#aboutButton {
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 15px;
+  /* -webkit-box-shadow: 1px 2px 14px #666666;
+  -moz-box-shadow: 1px 2px 14px #666666;
+  box-shadow: 1px 2px 14px #666666; */
+  font-family: Arial;
+  color: #3a3a3a;
+  font-size: 18px;
+  background: #d6d6d6;
+  padding: 15px 20px 15px 20px;
+  text-decoration: none;
+  border: none;
+}
+
+#aboutButton:hover {
+  background: #949494;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.drinkTitleDiv {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.drinkInfo {
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: #eeebeb; */
+}
+
+.imageDiv,
+.textDiv {
+  width: 45%;
+}
+
+.textDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.imageDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.imageDiv img {
+  border-radius: 20px;
+  max-width: 400px;
+}
+
+/* index.ejs */
+
+.searchLabel {
+  font-size: 2.5rem;
+}
+
+.random {
+  text-align: left;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.randomDrinks {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-align: left;
+  padding-left: 30px;
+  font-size: 40px;
+}
+
+.cocktailList {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  /* justify-content: space-evenly; */
+  margin-bottom: 100px;
+}
+
+.indexCocktailImg {
+  width: 250px;
+  border-radius: 13px;
+}
+
+.cocktailList a {
+  text-decoration: none;
+}
+
+.indexCocktail {
+  max-width: 260px;
+  margin-bottom: 30px;
+}
+
+.indexCategory {
+  font-size: 1.3rem;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #ff6f61;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.indexCocktailTitle {
+  font-size: 1.5rem;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #008080;
+  margin-top: 0;
+}
+
+.searchDiv {
+  display: flex;
+  justify-content: center;
+  /* width: 400px; */
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.searchDiv form {
+  width: 100%;
+}
+
+#search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  /* background-color: ivory; */
+}
+
+.error {
+  font-size: 20px;
+}
+
+#searchArea {
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* #FF6F61
+#008080 */
+
+/* about.ejs */
+
+.aboutText {
+  color: #333333;
+  font-weight: normal;
+  font-size: 1.2rem;
+  text-align: left;
+  margin: auto 200px 200px 200px;
+}
+
+.subtitle {
+  font-weight: 600;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+@media (width >=320px) and (width <=767px) {
+  #homePage {
+    display: none;
+  }
+  header {
+    padding: 0;
+    justify-content: space-evenly;
+  }
+  header a {
+    width: 140px;
+  }
+  .banner {
+    font-size: 20px;
+  }
+  .navigationList {
+    padding: 0;
+  }
+  #aboutButton {
+    box-shadow: none;
+  }
+  .mainContainer {
+    margin: 0;
+  }
+  .searchDiv {
+    width: 300px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  #search {
+    height: 100px;
+  }
+  #searchArea {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .drinkTitleDiv {
+    height: 90px;
+  }
+  .pageTitle {
+    font-size: 1.7rem;
+  }
+  .drinkMain {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .drinkInfo {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    font-size: 1rem !important;
+  }
+  .textDiv {
+    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .textDiv span {
+    display: block;
+  }
+  .ingredientList {
+    padding-left: 0;
+    margin: 0;
+    text-align: left;
+    list-style-type: none;
+  }
+  .imageDiv,
+  .textDiv {
+    width: 95%;
+    text-align: left;
+    align-items: center;
+  }
+  .imageDiv img {
+    width: 230px;
+  }
+  .drinkName,
+  .drinkCategory,
+  .alcohol,
+  .glass,
+  .ingredients,
+  .nameData,
+  .categoryData,
+  .alcoData,
+  .glassData,
+  .instructionText,
+  .ingredientMeasure,
+  .instructionTitle {
+    font-size: 15px;
+  }
+  .ingredientMeasure span {
+    display: inline-block;
+  }
+  .property {
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .property span {
+    margin: 0;
+  }
+  .random {
+    padding-left: 0;
+  }
+  .randomDrinks {
+    font-size: 28px;
+    padding-left: 0;
+    text-align: center;
+  }
+  .instructionDiv {
+    width: 95%;
+    padding: 10px !important;
+    align-items: flex-start;
+  }
+  .instructionDiv p {
+    width: 90%;
+    margin-top: 0;
+  }
+  #footer {
+    display: flex;
+    padding: 0;
+    justify-content: space-evenly;
+  }
+  .banner {
+    font-size: 20px;
+  }
+  .navigationList {
+    padding: 0;
+    width: 150px;
+    justify-content: flex-end;
+  }
+  .footerText {
+    display: none;
+    font-size: 0px;
+    width: 0;
+    height: 0;
+  }
+  .homeLink {
+    display: none;
+  }
+  .aboutLink a {
+    font-size: 17px;
+  }
+  .indexCategory,
+  .indexCocktailTitle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .mainContainer {
+    padding: 10px;
+  }
+  .pageTitle {
+    margin-bottom: 20px;
+  }
+  .aboutText {
+    margin: 0;
+  }
+  .subtitle {
+    margin-top: 20px;
+  }
+}
