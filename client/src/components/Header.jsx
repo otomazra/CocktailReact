@@ -1,4 +1,6 @@
-export default function Header() {
+export default function Header({showAbout}) {
+
+
   return (
     <>
       <div className="container">
@@ -15,7 +17,7 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a id="aboutButton" href="/about">
+            <a id="aboutButton" onClick={showAbout}>
               About
             </a>
           </li>

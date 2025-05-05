@@ -6,12 +6,14 @@ import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./components/Home.jsx";
 import Details from "./components/Details.jsx";
+import About from "./components/About.jsx";
 import "./main.css";
 
 function App() {
   const API_URL = import.meta.env.VITE_API_URL;
   const [showDetails, setShowDetails] = useState(false);
   const [drinkId, setDrinkId] = useState();
+  const [toggleAbout, setToggleAbout] = useState(false);
 
   function toggleDetails() {
     setShowDetails(true);
@@ -23,12 +25,16 @@ function App() {
     console.log("APP.jsx line 22. drink: ", drinkId)
   }
 
+  const showAbout = ()=>{
+    setToggleAbout(true);
+  }
+
   return (
     <>
-      <Header />
+      <Header showAbout={showAbout}/>
       {showDetails ? (
         <Details id={drinkId} />
-      ) : (
+      ) : toggleAbout ? <About /> : (
         <Home
           detailsFunction={toggleDetails}
           drinkIdFunction={drinkIdFunction}

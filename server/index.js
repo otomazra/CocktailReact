@@ -168,9 +168,9 @@ app.post("/search", async (req, res) => {
   }
 });
 
-app.get("/about", (req, res) => {
-  res.render("about.ejs");
-});
+// app.get("/about", (req, res) => {
+//   res.render("about.ejs");
+// });
 
 app.listen(port, () => {
   console.log(`Listening to ${port}`);
