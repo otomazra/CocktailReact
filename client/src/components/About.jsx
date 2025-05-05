@@ -1,4 +1,5 @@
-export default function () {
+export default function ({showAbout}) {
+
   return (
     <>
       <h1 className="pageTitle ">About Us</h1>

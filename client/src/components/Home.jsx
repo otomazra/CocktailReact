@@ -7,6 +7,9 @@ export default function Home(props) {
   const [drinksArray, setDrinksArray] = useState([]);
   const [drink, setDrink] = useState("");
 
+  useEffect(() => {
+    props.notShowAbout(); // ✅ Only runs once on mount
+  }, []);
 
   useEffect(() => {
     receiveDrinks();

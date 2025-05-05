@@ -9,6 +9,10 @@ export default function Details(props) {
   const [drink, setDrink] = useState({});
 
   useEffect(() => {
+    props.notShowAbout(); // ✅ Only runs once on mount
+  }, []);
+
+  useEffect(() => {
     async function fetchDrink() {
       try {
         const response = await axios.get(API_URL+"/cocktail/" + id);

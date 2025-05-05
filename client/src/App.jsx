@@ -25,17 +25,23 @@ function App() {
     console.log("APP.jsx line 22. drink: ", drinkId)
   }
 
-  const showAbout = ()=>{
+  const showAbout = () => {
     setToggleAbout(true);
+    setShowDetails(false); // ✅ Force-hide Details if About is requested
+  };
+  
+
+  const notShowAbout = ()=>{
+    setToggleAbout(false);
   }
 
   return (
     <>
       <Header showAbout={showAbout}/>
       {showDetails ? (
-        <Details id={drinkId} />
-      ) : toggleAbout ? <About /> : (
-        <Home
+        <Details notShowAbout={notShowAbout} id={drinkId} />
+      ) : toggleAbout ? <About showAbout={showAbout}/> : (
+        <Home notShowAbout={notShowAbout}
           detailsFunction={toggleDetails}
           drinkIdFunction={drinkIdFunction}
         />
