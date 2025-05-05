@@ -17,7 +17,7 @@ export default function Home(props) {
   }, [drinksArray]);
 
   const receiveDrinks = async () => {
-    const result = await axios.get(API_URL+"/api/");
+    const result = await axios.get(API_URL);
     setDrinksArray([...result.data]);
   };
 
@@ -31,7 +31,7 @@ export default function Home(props) {
       receiveDrinks();
     }
     try {
-      const result = await axios.post(API_URL+"/api/search", { search: drinkName });
+      const result = await axios.post(API_URL+"/search", { search: drinkName });
       console.log(result);
       setDrinksArray(result.data);
     } catch (error) {
@@ -43,7 +43,7 @@ export default function Home(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(drink);
-    const result = await axios.post(API_URL+"/api/search", { search: drink });
+    const result = await axios.post(API_URL+"/search", { search: drink });
     console.log(result);
     setDrinksArray(result.data);
   };
