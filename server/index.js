@@ -122,7 +122,7 @@ app.get("/cocktail/:id", async (req, res) => {
       };
     } catch (error) {
     res.status(404).send(error.message);
-    console.log(error.message);
+    console.log("Error message",error.message);
   }
 });
 
