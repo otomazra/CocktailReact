@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import DrinkList from "./DrinkList";
+import dotenv from ".env";
 
 export default function Home(props) {
   const API_URL = import.meta.env.VITE_API_URL;
