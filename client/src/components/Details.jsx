@@ -11,7 +11,7 @@ export default function Details(props) {
   useEffect(() => {
     async function fetchDrink() {
       try {
-        const response = await axios.get(API_URL+"api/cocktail/" + id);
+        const response = await axios.get(API_URL+"/api/cocktail/" + id);
         const data = response.data;
         console.log("response: ",response);
         console.log("response.data: ", data);
