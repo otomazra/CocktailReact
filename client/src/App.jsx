@@ -27,9 +27,8 @@ function App() {
 
   const showAbout = () => {
     setToggleAbout(true);
-    setShowDetails(false); // ✅ Force-hide Details if About is requested
+    setShowDetails(false); // Force-hide Details if About is requested
   };
-  
 
   const notShowAbout = ()=>{
     setToggleAbout(false);
@@ -46,7 +45,7 @@ function App() {
           drinkIdFunction={drinkIdFunction}
         />
       )}
-      <Footer />
+      <Footer showAbout={showAbout}/>
     </>
   );
 

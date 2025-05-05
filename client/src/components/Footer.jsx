@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer(props) {
   return (
     // <div className="footerContainer">
       <footer id="footer">
@@ -13,7 +13,7 @@ export default function Footer() {
             <a href="/">Home</a>
           </li>
           <li className="aboutLink">
-            <a href="/about">About</a>
+            <button onClick={props.showAbout}><a>About</a></button>
           </li>
         </ul>
       </footer>
