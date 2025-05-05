@@ -1,18 +1,23 @@
 import { useEffect } from "react";
-
 export default function Ingredients({ drink }) {
-
-console.log(drink);
-  const consistance = drink.consistance;
-  console.log(consistance);
-  let ingredientsList; 
-  function ingrTags(){
-    ingredientsList = consistance.map(ingredient=>(
-            <li className="ingredientMeasure" key={drink.id}>
-              <span className="measure">{ingredient.measure}</span>
-              <span className="ingredient">{ingredient.ingredient}</span>
-            </li>
-    ))
+  if (!drink.consistance || !Array.isArray(drink.consistance)) {
+    return null;
   }
-  return <ul className="ingredientList">{ingredientsList}</ul>;
+  useEffect(() => {
+    console.log(
+      "Ingredients.jsx line 6. Parent: Details. Consistance: ",
+      drink.consistance
+    );    
+    console.log("ingredientsList: ", drink.consistance);
+  });
+
+  return (
+    <ul className="ingredientList">
+      {drink.consistance.map((ingredient) => (
+      <li className="ingredientMeasure" key={ingredient.ingredient}>
+        <span className="measure">{ingredient.measure}</span>
+        <span className="ingredient">{ingredient.ingredient}</span>
+      </li>))}
+    </ul>
+  )
 }

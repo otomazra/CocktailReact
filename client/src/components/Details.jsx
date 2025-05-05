@@ -4,6 +4,7 @@ import Ingredients from "./Ingredients";
 
 export default function Details(props) {
   const id = props.id;
+  console.log("Details.jsx line 7. Parent: App.jsx. id: ", id);
   const [drink, setDrink] = useState({});
 
   useEffect(() => {
@@ -11,9 +12,11 @@ export default function Details(props) {
       try {
         const response = await axios.get("api/cocktail/" + id);
         const data = response.data;
+        console.log("response: ",response);
+        console.log("response.data: ", data);
         setDrink(data);
-        console.log(data);
-        console.log(drink);
+        console.log("Details.jsx line 16. data: ", data);
+        console.log("Details.jsx line 17. drink state: ", drink);
       } catch (error) {
         console.error("Failed to fetch drink:", error);
       }

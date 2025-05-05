@@ -18,6 +18,8 @@ function App() {
 
   function drinkIdFunction(id) {
     setDrinkId(id);
+    console.log("APP.jsx line 21. id: ", id);
+    console.log("APP.jsx line 22. drink: ", drinkId)
   }
 
   return (
