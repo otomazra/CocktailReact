@@ -2,8 +2,16 @@ import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
 import _ from "lodash";
+import cors from "cors";
 
 const app = express();
+
+
+app.use(cors({
+  origin: "https://cocktailreact-1.onrender.com", 
+  methods: ["GET", "POST"],
+}));
+
 const port = 3000;
 app.set("view engine", "ejs");
 app.use(express.static("public"));

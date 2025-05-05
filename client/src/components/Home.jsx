@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import DrinkList from "./DrinkList";
 
 export default function Home(props) {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [drinksArray, setDrinksArray] = useState([]);
   const [drink, setDrink] = useState("");
 
@@ -16,7 +17,7 @@ export default function Home(props) {
   }, [drinksArray]);
 
   const receiveDrinks = async () => {
-    const result = await axios.get("/api/");
+    const result = await axios.get(API_URL+"/api/");
     setDrinksArray([...result.data]);
   };
 
@@ -30,7 +31,7 @@ export default function Home(props) {
       receiveDrinks();
     }
     try {
-      const result = await axios.post("/api/search", { search: drinkName });
+      const result = await axios.post(API_URL+"/api/search", { search: drinkName });
       console.log(result);
       setDrinksArray(result.data);
     } catch (error) {
@@ -42,7 +43,7 @@ export default function Home(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(drink);
-    const result = await axios.post("/api/search", { search: drink });
+    const result = await axios.post(API_URL+"/api/search", { search: drink });
     console.log(result);
     setDrinksArray(result.data);
   };

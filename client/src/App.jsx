@@ -9,6 +9,7 @@ import Details from "./components/Details.jsx";
 import "./main.css";
 
 function App() {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [showDetails, setShowDetails] = useState(false);
   const [drinkId, setDrinkId] = useState();
 
