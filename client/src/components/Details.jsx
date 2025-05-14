@@ -9,7 +9,7 @@ export default function Details(props) {
   const [drink, setDrink] = useState({});
 
   useEffect(() => {
-    props.notShowAbout(); // ✅ Only runs once on mount
+    props.notShowAbout(); // Only runs once on mount
   }, []);
 
   useEffect(() => {
